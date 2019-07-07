@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Template</title>
+</head>
+<body>
+
+    <h1>HOME PARA TESTE DE TEMPLATE</h1>
+
+    <p>Agora são: {{now}}</p>
+
+    <ul>
+        <p>Clientes:
+            {% for item in transacao %}
+
+                {% if item == 't1' %}
+                    <b><li>{{item}}</li></b>
+                {% else %}
+                    <li>{{item}}</li>
+                {% endif %}
+
+            {% endfor %}
+        </p>
+    </ul>
+
+
+
+</body>
+</html>

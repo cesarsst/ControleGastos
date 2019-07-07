@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Template</title>
+</head>
+<body>
+
+    <h1>Pagina de Listagem</h1>
+
+    <ul>
+        <h2>Listagem:</h2>
+            {% for item in transacao %}
+
+                <br>
+        <li><a href="{% url 'url_update' item.id %}"> {{item.descricao}} - {{item.data}} - {{item.valor}} - {{item.categoria}} </a></li>
+
+            {% endfor %}
+    </ul>
+
+    <br>
+
+    <ul>
+        <a href="{% url 'url_nova' %}"><b>Nova Transação</b></a>
+    </ul>
+
+
+</body>
+</html>
